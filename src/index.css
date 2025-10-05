@@ -1,0 +1,430 @@
+/* ---------------------------------------------------- */
+/* 1. Imports and Custom Directives */
+/* ---------------------------------------------------- */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+
+/* Custom Directives for Tailwind v4/PostCSS */
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* ---------------------------------------------------- */
+/* 4. Unified CSS Variable Definitions (:root and .dark) */
+/* ---------------------------------------------------- */
+:root {
+  /* Functional Colors (shadcn/ui - Standard Light Mode Values) */
+  --radius: 0.625rem;
+  --background: oklch(1 0 0); /* White/Light Background */
+  --foreground: oklch(0.129 0.042 264.695); /* Dark Text */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755); /* Primary Color */
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.929 0.013 255.508);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Agenko Brand/Legacy Colors (Used for specific component CSS, not Tailwind utilities) 
+     هذه المتغيرات القديمة تم الاحتفاظ بها بأسماء جديدة لتجنب التداخل */
+  --brand-color-primary: #9CFE4F;
+  --brand-heading-color: #1A1A1A;
+  --brand-primary-black-color: #0E0F11;
+  --brand-white-color: #ffffff;
+  --brand-text-color: #9E9FA0;
+  --brand-border-color: #313131;
+  --brand-gray-dark: #18191B;
+  
+  /* Typography */
+  --heading-font: "Source Sans 3", serif;
+  --body-font: "Roboto", serif;
+}
+
+.dark {
+  /* Dark Mode Overrides (oklch) */
+  --background: oklch(0.129 0.042 264.695);
+  --foreground: oklch(0.984 0.003 247.858);
+  --card: oklch(0.208 0.042 265.755);
+  --card-foreground: oklch(0.984 0.003 247.858);
+  --popover: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.929 0.013 255.508);
+  --primary-foreground: oklch(0.208 0.042 265.755);
+  --secondary: oklch(0.279 0.041 260.031);
+  --secondary-foreground: oklch(0.984 0.003 247.858);
+  --muted: oklch(0.279 0.041 260.031);
+  --muted-foreground: oklch(0.704 0.04 256.788);
+  --accent: oklch(0.279 0.041 260.031);
+  --accent-foreground: oklch(0.984 0.003 247.858);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.551 0.027 264.364);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.551 0.027 264.364);
+}
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ---------------------- */
+/* Variants */
+/* ---------------------- */
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------- */
+/* Light Mode Variables */
+/* ---------------------- */
+:root {
+  --radius: 0.625rem;
+
+  /* Backgrounds */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --card: #ffffff;
+  --card-foreground: #1a1a1a;
+
+  --popover: #ffffff;
+  --popover-foreground: #1a1a1a;
+
+  /* Brand Colors */
+  --brand-primary: #9CFE4F;
+  --brand-heading: #1A1A1A;
+  --brand-black: #0E0F11;
+  --brand-white: #ffffff;
+  --brand-text: #9E9FA0;
+  --brand-border: #313131;
+  --brand-gray-dark: #18191B;
+
+  /* Fonts */
+  --heading-font: "Source Sans 3", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}
+
+/* ---------------------- */
+/* Dark Mode Variables */
+/* ---------------------- */
+.dark {
+  --background: #0E0F11;
+  --foreground: #f5f5f5;
+
+  --card: #18191B;
+  --card-foreground: #ffffff;
+
+  --popover: #18191B;
+  --popover-foreground: #ffffff;
+
+  /* Brand Colors (inverted) */
+  --brand-primary: #9CFE4F;
+  --brand-heading: #ffffff;
+  --brand-black: #0E0F11;
+  --brand-white: #ffffff;
+  --brand-text: #9E9FA0;
+  --brand-border: #444;
+  --brand-gray-dark: #111;
+  --shape-blur_two: #8778F5;
+}
+/* ---------------------------------------------------- */
+/* 5. Base Layer & Legacy Styles */
+/* ---------------------------------------------------- */
+@layer base {
+  /* Global Reset & Box Sizing */
+  html {
+    font-size: 100%;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* يستخدم المتغيرات الوظيفية لـ shadcn/ui */
+    @apply border-border outline-ring/50; 
+  }
+
+  /* Link Styles (A11y Fix: Custom Focus Ring) */
+  a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+
+  a:hover,
+  a:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:focus,
+  input:focus,
+  textarea:focus,
+  button:focus {
+    text-decoration: none;
+    outline: none;
+    /* يستخدم اللون الأساسي لـ Agenko للتركيز المرئي */
+    box-shadow: 0 0 0 2px var(--brand-color-primary);
+  }
+
+  i,
+  span,
+  a {
+    display: inline-block;
+  }
+
+  /* Typography Base */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    margin: 0px;
+    /* يستخدم المتغير الأصلي */
+    color: var(--brand-white-color); 
+    font-family: var(--heading-font);
+  }
+
+  h1 {
+    font-size: 85px;
+    line-height: 100px;
+  }
+  
+  /* ... (تم إزالة تكرار أنماط H) ... */
+  h2 {
+    font-size: 52px;
+    line-height: 58px;
+  }
+  h3 {
+    font-size: 27px;
+    line-height: 40px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 1;
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 1;
+  }
+  
+  /* List and Paragraph Resets */
+  ul,
+  ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+  }
+
+  p {
+    margin: 0px;
+  }
+
+  /* Form and Media Resets */
+  input,
+  textarea {
+    display: inherit;
+  }
+
+  button {
+    border: none;
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  iframe {
+    width: 100%;
+    border: none;
+    display: inherit;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  /* Body Styles */
+  body {
+    /* يستخدم المتغيرات الوظيفية (لتمكين Dark Mode) */
+    @apply bg-background text-foreground; 
+    
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 400;
+    /* يستخدم المتغير الأصلي للنص */
+    color: var(--brand-text-color); 
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 30px;
+    overflow-x: hidden;
+  }
+
+  main {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+/* ---------------------------------------------------- */
+/* 6. Utility and Responsive Overrides */
+/* ---------------------------------------------------- */
+
+@media (min-width: 1451px) {
+  .container {
+    max-width: 1314px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1450px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.p-r {
+  position: relative;
+}
+
+.bg_cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+
+:root {
+  --primary-color: #9CFE4F;
+  /* اللون المستخدم للعناوين في الوضع الداكن هو الأبيض */
+  --heading-color: #ffffff;
+  /* اللون الأسود الأساسي يبقى كما هو ليتماشى مع الخلفيات الداكنة */
+  --primary-black-color: #0E0F11;
+  /* اللون الأبيض يمكن استخدامه للخطوط أو العناصر داخل الخلفيات الداكنة */
+  --white-color: #ffffff;
+  /* لون النص في الوضع الداكن يكون رماديًا فاتحًا لإبراز القراءة */
+  --text-color: #9E9FA0;
+  /* لون الحدود في الوضع الداكن يكون أفتح قليلاً من الخلفية لإظهار التباين */
+  --border-color: #444444;
+  /* لون الرمادي الداكن يتم تعيينه لدرجات أكثر عمقًا في الخلفية */
+  --gray-dark: #111111;
+  /* الخطوط تظل كما هي */
+  --heading-font: "Source Sans 3", serif;
+  --body-font: "Roboto", serif;
+}
+
+/* Fix for floating header */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure header floats above content without taking space */
+header {
+  position: fixed !important;
+}
+
+/* Remove any top margin/padding from first section */
+main > section:first-child,
+.hero-section,
+#hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Fix Toggle Switch size */
+.toggle-cont {
+  transform: scale(0.45) !important;
+}
+
+
+
+/* Offcanvas Overlay */
+.offcanvas__overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #151515;
+  z-index: 1;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  right: 0;
+}
+.offcanvas__overlay.overlay-open {
+  opacity: 0.8;
+  visibility: visible;
+}

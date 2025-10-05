@@ -1,0 +1,16 @@
+/* CSS Module (Footer.module.css) */
+
+/* تعريف حركة الـ spin */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* تطبيق حركة الدوران */
+.rotate360 {
+  animation: spin 7s linear infinite; /* دوران مستمر لمدة 7 ثوانٍ */
+}
