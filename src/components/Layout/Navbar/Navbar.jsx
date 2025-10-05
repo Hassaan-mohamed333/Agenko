@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Switch from '../Toggle-switches/Toggle-switches';
 import ThemeButton from '../../ThemeButton/ThemeButton';
-import '../../../index.css';
+import '@../../../index.css';
 
 library.add(faAngleDown, faArrowRight, faFacebookF, faTwitter, faLinkedinIn, faYoutube);
 

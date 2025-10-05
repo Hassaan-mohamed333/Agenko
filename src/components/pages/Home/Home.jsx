@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import BlogSection from '../BlogSection/BlogSection';  
 import ThemeButton from '../../ThemeButton/ThemeButton';
-import Loader from '@/src/components/Layout/loader/loader';
+import Loader from '/src/components/Layout/loader/loader';
 
 import team1Img from '../../../assets/images/team1.jpg';
 import team2Img from '../../../assets/images/team2.jpg';
