@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import SplashCursor from '../../SplashCursor/SplashCursor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './Home.module.css';
-import from '/src/assets/images/hero-img1.jpg'
+import Project from '@/assets/images/Project.png';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
