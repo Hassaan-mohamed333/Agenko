@@ -9,8 +9,8 @@ export default function PageBanner({
   ],
   showIcon = true,
   showCircle = true,
-  iconImage = "@/src/assets/images/pages/shape//star1.png",
-  circleImage = "@/src/assets/images/pages/shape/circle-shape1.png",
+  iconImage = "@/images/pages/shape//star1.png",
+  circleImage = "@/images/pages/shape/circle-shape1.png",
   className = ""
 }) {
   return (

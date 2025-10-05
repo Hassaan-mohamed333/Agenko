@@ -7,7 +7,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#0E0F11] flex flex-col items-center justify-center p-8">
       
-      {/* 404 بنفس التنسيقات */}
+      
       <FuzzyText
         fontSize="clamp(2rem, 8vw, 8rem)" 
         fontWeight={900}                  

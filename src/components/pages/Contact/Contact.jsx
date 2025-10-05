@@ -59,7 +59,7 @@ export default function ContactSection() {
                         <div className="relative bg-[#0E0F11] border border-[#313131] rounded-3xl p-8 md:p-12 lg:mr-8">
                             {/* Background World Map */}
                               <div className="absolute top-0 right-0 z-0 opacity-100  h-full pointer-events-none">
-                <img src="/src/assets/images/pages/shape/world.png" alt="" className="w-full h-full object-cover" />
+                <img src="/images/pages/shape/world.png" alt="" className="w-full h-full object-cover" />
               </div>
 
                             <div className="space-y-6 relative z-10">

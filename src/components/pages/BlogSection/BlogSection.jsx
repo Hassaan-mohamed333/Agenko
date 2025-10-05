@@ -35,7 +35,7 @@ const BlogSection = () => {
             <div className="flex-shrink-0 w-full md:w-64">
               <div className="overflow-hidden rounded-lg">
                 <img 
-                  src="/src/assets/images/blog1.jpg" 
+                  src="/images/blog1.jpg" 
                   alt="Blog Image"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
@@ -77,7 +77,7 @@ const BlogSection = () => {
             <div className="flex-shrink-0 w-full md:w-64">
               <div className="overflow-hidden rounded-lg">
                 <img 
-                  src="/src/assets/images/blog2.jpg" 
+                  src="/images/blog2.jpg" 
                   alt="Blog Image"
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />

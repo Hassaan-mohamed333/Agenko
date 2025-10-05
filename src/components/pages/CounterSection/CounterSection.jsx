@@ -65,7 +65,7 @@ export default function CounterSection() {
                                 </li>
                                 <li className="flex-1 min-w-[200px] pl-8 border-l border-gray-800">
                                     <div className="space-y-3">
-                                        <h2 className="text-5xl font-bold font-bold text-black dark:text-white">
+                                        <h2 className="text-5xl  font-bold text-black dark:text-white">
                                             {awardCount}+
                                         </h2>
                                         <p className="text-gray-400">Award for digital innovation</p>
@@ -78,7 +78,7 @@ export default function CounterSection() {
                     <div className="lg:col-span-5">
                         <div className="relative max-w-md ml-auto">
                             <img
-                                src="/src/assets/images/digital-agency/about/about1.jpg"
+                                src="/images/digital-agency/about/about1.jpg"
                                 alt="About Agenko Agency"
                                 className="w-full rounded-3xl"
                             />
