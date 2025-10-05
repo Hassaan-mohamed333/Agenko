@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import FuzzyText from "../../UI/fuzzy-text.jsx"; 
+import FuzzyText from "../../Ui/fuzzy-text"; 
 
 
 export default function NotFound() {
@@ -20,7 +20,7 @@ export default function NotFound() {
         404
       </FuzzyText>
 
-      {/* notfound بنفس التنسيقات */}
+      
       <FuzzyText
         fontSize="clamp(1.5rem, 5vw, 4rem)"
         fontWeight={900}
