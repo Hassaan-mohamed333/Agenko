@@ -41,7 +41,7 @@ export default function Footer() {
                   <div className="footer-logo mb-5 p-1 inline-block rounded-full border border-[var(--border-color)] bg-[var(--primary-black-color)]">
                     <a href="index.html">
                       <img
-                        src="/src/assets/images/logo-main.png"
+                        src="/images/logo-main.png"
                         alt="Brand Logo"
                       />
                     </a>

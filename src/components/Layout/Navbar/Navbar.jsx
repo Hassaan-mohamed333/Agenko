@@ -120,7 +120,7 @@ export default function Navbar() {
               : 'border-gray-700 bg-color-primary'
           }`}>
             <a href="index.html" className="block">
-              <img src="/src/assets/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto mx-auto" />
+              <img src="/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto mx-auto" />
             </a>
           </div>
 
@@ -216,7 +216,7 @@ export default function Navbar() {
           <div className="p-5">
             <div className="text-center mb-5">
               <a href="index.html" className="inline-block">
-                <img src="/src/assets/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto" />
+                <img src="/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto" />
               </a>
             </div>
 
