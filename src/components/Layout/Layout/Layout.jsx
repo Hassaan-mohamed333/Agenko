@@ -7,7 +7,7 @@ export default function Layout() {
     return (
         <div>
             <Navbar />
-            <main style={{ minHeight: '100vh', paddingTop: '120px' }}>
+            <main style={{ minHeight: '100vh', paddingTop: '0px' }}>
                 <Outlet />
             </main>
             <Footer />

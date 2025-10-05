@@ -4,7 +4,6 @@ import 'aos/dist/aos.css';
 import SplashCursor from '../../SplashCursor/SplashCursor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import style from './Home.module.css';
-import Project from '@/assets/images/Project.png';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -90,61 +89,104 @@ export default function Home() {
 
   return (
     <>
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       
-      <section className="relative min-h-screen bg-[var(--primary-black-color)] pt-32 pb-20 transition-colors duration-300">
-        <div className="absolute -top-1/4 -left-1/4 z-0">
-          <span className="block w-[500px] h-[500px] lg:w-[760px] lg:h-[760px] rounded-full bg-[var(--primary-color)]/40 blur-[150px]" />
-        </div>
-        <div className="absolute -top-1/4 -right-1/4 z-0">
-          <span className="block w-[500px] h-[500px] lg:w-[660px] lg:h-[660px] rounded-full bg-[var(--shape-blur_two)] blur-[150px]" />
-        </div>
+    {/* Hero Section */}
+<section id="hero" className="relative min-h-screen bg-[var(--agenko-background-dark)]  pt-[240px] md:pt-[260px] lg:pt-[280px] pb-[200px] transition-colors duration-300 overflow-hidden">
+  {/* Background Blur Effects */}
+  <div className="absolute -top-[30%] -left-[25%] z-0">
+    <span className="block w-[360px] h-[360px] md:w-[500px] md:h-[500px] lg:w-[760px] lg:h-[760px] rounded-full bg-[var(--agenko-primary-green)]/60 blur-[200px]" />
+  </div>
+  <div className="absolute -top-[30%] -right-[15%] z-0">
+    <span className="block w-[300px] h-[300px] md:w-[500px] md:h-[500px] lg:w-[660px] lg:h-[660px] rounded-full bg-[var(--agenko-accent-purple)] blur-[150px]" />
+  </div>
+  <div className="absolute -bottom-[70%] left-1/2 -translate-x-1/2 z-0">
+    <span className="block w-[760px] h-[760px] rounded-full bg-[var(--agenko-primary-green)]/60 blur-[200px]" />
+  </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-4">
-              <h1 className="text-7xl sm:text-8xl lg:text-[160px] xl:text-[200px] leading-none font-bold text-white transition-colors">
-                CREATIVE
-              </h1>
-              <div className="absolute -right-4 top-1 hidden lg:block">
-                <img
-                  src="@/src/assets/images/element2.png"
-                  alt="element"
-                  className={`w-24 h-24 lg:w-32 lg:h-32 opacity-60 ${style.rotate360}`}
-                />
-              </div>
-            </div>
-
-            <div className="relative flex justify-end items-center mb-12">
-              <h2 className="text-7xl sm:text-8xl lg:text-[160px] xl:text-[200px] leading-none font-bold text-white transition-colors">
-                AGENCY
-              </h2>
-            </div>
-
-            <div className="max-w-xl lg:max-w-md">
-              <p className="text-base lg:text-lg leading-relaxed text-gray-300" data-aos="fade-up">
-                We are a{' '}
-                <span className="text-[var(--primary-color)] font-semibold" data-aos="fade-up">Creative Agency</span>{' '}
-                <span className="text-gray-400" data-aos="fade-up">
-                  with over 25 years of Our experience
-                </span>
-                , specializing in delivering cutting-edge digital solutions, including web design.
-              </p>
-            </div>
-
-            <div className="mt-12" data-aos="fade-up">
-              <ThemeButton text="Learn More" href="about.html" />
-            </div>
+  <div className="container mx-auto px-4 relative z-10">
+    <div className="max-w-7xl mx-auto">
+      <div className="relative mb-[80px] md:mb-[130px]">
+        <div className="mb-0">
+          <h1 
+            className="text-[60px] md:text-[80px] lg:text-[140px] xl:text-[200px] leading-none font-bold text-[var(--agenko-heading-light)] transition-colors font-['Source_Sans_3']"
+            data-aos="fade-up"
+            data-aos-duration="800"
+          >
+            CREATIVE
+          </h1>
+          <div className="absolute -right-4 top-1 hidden lg:block">
+            <img
+              src="/images/element2.png"
+              alt="element"
+              className="w-24 h-24 lg:w-32 lg:h-32 opacity-60 animate-spin-slow"
+            />
           </div>
         </div>
-      </section>
 
+        <div className="relative flex justify-end items-center mb-12">
+          <h2 
+            className="text-[60px] md:text-[80px] lg:text-[140px] xl:text-[200px] leading-none font-bold text-[var(--agenko-heading-light)] transition-colors font-['Source_Sans_3']"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="100"
+          >
+            AGENCY
+          </h2>
+        </div>
+
+        <div className="max-w-xl lg:max-w-md">
+          <p 
+            className="text-base lg:text-lg leading-relaxed text-[var(--agenko-text-muted)]" 
+            data-aos="fade-up"
+          >
+            We are a{' '}
+            <span className="text-[var(--agenko-primary-green)] font-semibold">
+              Creative Agency
+            </span>{' '}
+            <span className="text-[var(--agenko-text-light)]">
+              with over 25 years of experience
+            </span>
+            , specializing in delivering cutting-edge digital solutions, including web design.
+          </p>
+        </div>
+
+        <div className="mt-12" data-aos="fade-up">
+          <ThemeButton text="Learn More" href="about.html" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Video Section */}
+<section className="relative -mt-[200px] z-10">
+  <div className="container mx-auto px-4 lg:max-w-[1314px]">
+    <div className="w-full" data-aos="fade-up">
+      <div className="relative">
+        <img 
+          src="/images/hero-img1.jpg" 
+          alt="Hero Image"
+          className="rounded-[15px] w-full"
+        />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <a 
+            href="https://www.youtube.com/watch?v=PJK2253cVgc" 
+            className="video-popup w-[90px] h-[90px] rounded-full border border-[var(--agenko-border-dark)]/20 bg-[var(--agenko-text-light)]/10 backdrop-blur-[5px] flex items-center justify-center text-[var(--agenko-text-light)] text-2xl transition-all duration-300 hover:scale-110 hover:bg-[var(--agenko-primary-green)] hover:text-[var(--agenko-heading-dark)]"
+          >
+            <i className="fas fa-play"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="relative -mt-[00px] z-10">
         <div className="container mx-auto px-4 lg:max-w-[1314px]">
           <div className="w-full" data-aos="fade-up">
             <div className="relative">
               <img 
-                src="@/src/assets/images/hero-img1.jpg" 
+                src="/images/hero-img1.jpg" 
                 alt="Hero Image"
                 className="rounded-[15px] w-full"
               />
@@ -239,7 +281,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="@/src/assets/images/project1.jpg"
+                    src="/images/project1.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -268,7 +310,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="@/src/assets/images/project3.jpg"
+                    src="/images/project3.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -299,7 +341,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="@/src/assets/images/project2.jpg"
+                    src="/images/project2.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -328,7 +370,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="@/src/assets/images/project2.jpg"
+                    src="/images/project2.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -557,7 +599,7 @@ export default function Home() {
             <div className="lg:col-span-4">
               <div className="overflow-hidden rounded-lg mb-8">
                 <img 
-                  src="@/src/assets/images/award1.jpg" 
+                  src="/images/award1.jpg" 
                   alt="Award Image"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -699,7 +741,7 @@ export default function Home() {
             <div className="lg:col-span-4">
               <div className="overflow-hidden rounded-lg shadow-2xl">
                 <img 
-                  src="@/src/assets/images/testimonial.jpg" 
+                  src="/images/testimonial.jpg" 
                   alt="Testimonial"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
