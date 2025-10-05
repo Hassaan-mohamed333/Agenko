@@ -4,20 +4,20 @@ import style from './Footer.module.css';  // استيراد الـ CSS Module
 export default function Footer() {
   return (
     <footer className="agenko-footer bg-[var(--gray-dark)] pt-32 relative overflow-hidden">
-      {/* أشكال الديكور */}
+      
       <div className="shape shape-one absolute left-0 bottom-24 z-0">
         <span>
           <img
-            src="@/src/assets/images/element1.png"
+            src="/src/assets/images/element1.png"
             alt="Shape"
-            className={style.rotate360}  // تطبيق حركة الدوران على الصورة
+            className={style.rotate360}  
           />
         </span>
       </div>
       <div className="shape shape-two absolute right-0 bottom-36 z-[0]">
         <span>
           <img
-            src="@/src/assets/images/element2.png"
+            src="/src/assets/images/element2.png"
             alt="Shape"
             className={style.rotate360}  
           />
