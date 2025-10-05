@@ -447,42 +447,42 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-0 bg-[var(--brand-black)]">
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors bg-[var(--brand-black)]">
                   <img
-                    src="@/src/assets/images/client1.png"
+                    src="/src/assets/images/client1.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="@/src/assets/images/client2.png"
+                    src="/src/assets/images/client2.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="@/src/assets/images/client3.png"
+                    src="/src/assets/images/client3.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="@/src/assets/images/client4.png"
+                    src="/src/assets/images/client4.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="@/src/assets/images/client5.png"
+                    src="/src/assets/images/client5.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="@/src/assets/images/client6.png"alt="Client"
+                    src="/src/assets/images/client6.png"alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
