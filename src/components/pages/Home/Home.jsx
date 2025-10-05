@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import BlogSection from '../BlogSection/BlogSection';  
 import ThemeButton from '../../ThemeButton/ThemeButton';
-import Loader from '/src/components/Layout/loader/loader';
+import Loader from '@/src/components/Layout/loader/loader';
 
 import team1Img from '@../../../assets/images/team1.jpg';
 import team2Img from '@../../../assets/images/team2.jpg';
@@ -107,7 +107,7 @@ export default function Home() {
               </h1>
               <div className="absolute -right-4 top-1 hidden lg:block">
                 <img
-                  src="/src/assets/images/element2.png"
+                  src="@/src/assets/images/element2.png"
                   alt="element"
                   className={`w-24 h-24 lg:w-32 lg:h-32 opacity-60 ${style.rotate360}`}
                 />
@@ -143,7 +143,7 @@ export default function Home() {
           <div className="w-full" data-aos="fade-up">
             <div className="relative">
               <img 
-                src="/src/assets/images/hero-img1.jpg" 
+                src="@/src/assets/images/hero-img1.jpg" 
                 alt="Hero Image"
                 className="rounded-[15px] w-full"
               />
@@ -238,7 +238,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="/src/assets/images/project1.jpg"
+                    src="@/src/assets/images/project1.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -267,7 +267,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="/src/assets/images/project3.jpg"
+                    src="@/src/assets/images/project3.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -298,7 +298,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="/src/assets/images/project2.jpg"
+                    src="@/src/assets/images/project2.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -327,7 +327,7 @@ export default function Home() {
               <div className="mb-16 group bg-[var(--gray-dark)] dark:bg-[var(--card)] border-[var(--border-color)] p-4 rounded-2xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
                 <div className="relative overflow-hidden rounded-2xl mb-5">
                   <img
-                    src="/src/assets/images/project2.jpg"
+                    src="@/src/assets/images/project2.jpg"
                     alt="Project"
                     className="w-full transform group-hover:scale-110 transition-transform duration-500"
                   />
@@ -447,42 +447,42 @@ export default function Home() {
               <div className="grid grid-cols-3 gap-0 bg-[var(--brand-black)]">
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors bg-[var(--brand-black)]">
                   <img
-                    src="/src/assets/images/client1.png"
+                    src="@/src/assets/images/client1.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="/src/assets/images/client2.png"
+                    src="@/src/assets/images/client2.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="/src/assets/images/client3.png"
+                    src="@/src/assets/images/client3.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="/src/assets/images/client4.png"
+                    src="@/src/assets/images/client4.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="/src/assets/images/client5.png"
+                    src="@/src/assets/images/client5.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
                 <div className="client-item border border-[#313131] p-8 text-center hover:border-primary transition-colors">
                   <img
-                    src="/src/assets/images/client6.png"alt="Client"
+                    src="@/src/assets/images/client6.png"alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
@@ -556,7 +556,7 @@ export default function Home() {
             <div className="lg:col-span-4">
               <div className="overflow-hidden rounded-lg mb-8">
                 <img 
-                  src="/src/assets/images/award1.jpg" 
+                  src="@/src/assets/images/award1.jpg" 
                   alt="Award Image"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -698,7 +698,7 @@ export default function Home() {
             <div className="lg:col-span-4">
               <div className="overflow-hidden rounded-lg shadow-2xl">
                 <img 
-                  src="/src/assets/images/testimonial.jpg" 
+                  src="@/src/assets/images/testimonial.jpg" 
                   alt="Testimonial"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
