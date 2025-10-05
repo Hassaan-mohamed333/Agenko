@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Footer.module.css';  // استيراد الـ CSS Module
+import style from './Footer.module.css';  
 
 export default function Footer() {
   return (
@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="shape shape-one absolute left-0 bottom-24 z-0">
         <span>
           <img
-            src="@/src/assets/images/element1.png"
+            src="/assets/images/element1.png"
             alt="Shape"
             className={style.rotate360}  
           />
@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="shape shape-two absolute right-0 bottom-36 z-[0]">
         <span>
           <img
-            src="@/src/assets/images/element2.png"
+            src="/assets/images/element2.png"
             alt="Shape"
             className={style.rotate360}  
           />
