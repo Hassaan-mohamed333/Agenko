@@ -181,27 +181,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-      <section className="relative -mt-[00px] z-10">
-        <div className="container mx-auto px-4 lg:max-w-[1314px]">
-          <div className="w-full" data-aos="fade-up">
-            <div className="relative">
-              <img 
-                src="/images/hero-img1.jpg" 
-                alt="Hero Image"
-                className="rounded-[15px] w-full"
-              />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <a 
-                  href="https://www.youtube.com/watch?v=PJK2253cVgc" 
-                  className="video-popup w-[90px] h-[90px] rounded-full border border-white/20 bg-white/10 backdrop-blur-[5px] flex items-center justify-center text-white text-2xl transition-all duration-300 hover:scale-110"
-                >
-                  <i className="fas fa-play"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
       <section className="relative py-32 bg-white dark:bg-[var(--primary-black-color)] transition-colors duration-300">
         <div className="container mx-auto px-4">
