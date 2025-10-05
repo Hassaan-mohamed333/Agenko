@@ -13,10 +13,10 @@ import BlogSection from '../BlogSection/BlogSection';
 import ThemeButton from '../../ThemeButton/ThemeButton';
 import Loader from '/src/components/Layout/loader/loader';
 
-import team1Img from '../../../assets/images/team1.jpg';
-import team2Img from '../../../assets/images/team2.jpg';
-import team3Img from '../../../assets/images/team3.jpg';
-import team4Img from '../../../assets/images/team4.jpg';
+import team1Img from '@../../../assets/images/team1.jpg';
+import team2Img from '@../../../assets/images/team2.jpg';
+import team3Img from '@../../../assets/images/team3.jpg';
+import team4Img from '@../../../assets/images/team4.jpg';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

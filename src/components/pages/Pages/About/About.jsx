@@ -8,31 +8,30 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// بيانات أعضاء الفريق
 const teamMembers = [
   {
     id: 1,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '/src/assets/images/pages/team/team1.jpg', 
+    image: '@/src/assets/images/pages/team/team1.jpg', 
   },
   {
     id: 2,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '/src/assets/images/pages/team/team2.jpg',
+    image: '@/src/assets/images/pages/team/team2.jpg',
   },
   {
     id: 3,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '/src/assets/images/pages/team/team3.jpg',
+    image: '@/src/assets/images/pages/team/team3.jpg',
   },
   {
     id: 4,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '/src/assets/images/pages/team/team4.jpg',
+    image: '@/src/assets/images/pages/team/team4.jpg',
   },
   {
     id: 5,
