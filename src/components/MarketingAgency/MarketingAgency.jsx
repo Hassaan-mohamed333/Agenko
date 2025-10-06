@@ -4,7 +4,6 @@ import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/s
 import CounterSection from '../pages/CounterSection/CounterSection';
 
 export default function MarketingAgency() {
-
     const techLogos = [
         { node: <SiReact />, title: "React", href: "https://react.dev" },
         { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
@@ -30,11 +29,11 @@ export default function MarketingAgency() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="hero-content mb-16 fade-up">
-    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
-        Agency For Growth Through Innovative 
-        <span className="text-blue-600 dark:text-black relative z-2 ml-1">  Marketing.</span>
-    </h1>
-</div>
+                                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+                                        Agency For Growth Through Innovative 
+                                        <span className="text-blue-600 dark:text-black relative z-2 ml-1"> Marketing.</span>
+                                    </h1>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -45,11 +44,11 @@ export default function MarketingAgency() {
                             alt="Hero Image" 
                             className="mx-auto rounded-lg"
                         />
-                        <svg className='right-[-1px] top-[-1px] absolute ' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M42 92V41.5C42 18.5802 23.4198 0 0.5 0H834.5V171.999C834.5 149.907 816.591 132 794.5 132H82C59.9086 132 42 114.091 42 92Z" fill="#0E0F11"></path>
-                                </svg>
-                        <div className="text-box  max-w-2xl mx-auto  right-[-1px] top-[-1px] absolute bg-[var(--agenko-background-dark)] ">
-                            <p className="text-[var(--agenko-text-muted)] text-lg ">
+                        <svg className='right-[-1px] top-[-1px] absolute' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 92V41.5C42 18.5802 23.4198 0 0.5 0H834.5V171.999C834.5 149.907 816.591 132 794.5 132H82C59.9086 132 42 114.091 42 92Z" fill="#0E0F11"></path>
+                        </svg>
+                        <div className="text-box max-w-2xl mx-auto right-[-1px] top-[-1px] absolute bg-[var(--agenko-background-dark)]">
+                            <p className="text-[var(--agenko-text-muted)] text-lg">
                                 A <span className="text-[var(--agenko-primary-green)]">digital marketing agency</span> focused delivering innovative strategies to accelerate business growth, enhance brand visibility, and increase customer engagement, using data-driven approaches.
                             </p>
                         </div>
@@ -58,7 +57,7 @@ export default function MarketingAgency() {
             </section>
 
             {/* Company Section */}
-            <div style={{ height: '200px', position: 'relative', overflow: 'hidden', backgroundColor:"var(--agenko-background-dark)" }} className="flex items-center">
+            <div style={{ height: '200px', position: 'relative', overflow: 'hidden', backgroundColor: "var(--agenko-background-dark)" }} className="flex items-center">
                 <LogoLoop
                     logos={techLogos}
                     speed={120}
@@ -70,6 +69,24 @@ export default function MarketingAgency() {
                     fadeOut
                     fadeOutColor="#ffffff"
                     ariaLabel="Technology partners"
+                />
+            </div>
+
+            {/* Image Logos Section */}
+            <div style={{ height: '150px', position: 'relative', overflow: 'hidden', backgroundColor: "var(--agenko-background-dark)" }} className="flex items-center">
+                <LogoLoop
+                    logos={imageLogos.map(logo => ({
+                        node: <img src={logo.src} alt={logo.alt} className="h-12 w-auto object-contain" />,
+                        title: logo.alt,
+                        href: logo.href
+                    }))}
+                    speed={100}
+                    direction="right"
+                    logoHeight={48}
+                    gap={60}
+                    pauseOnHover
+                    fadeOut
+                    ariaLabel="Company partners"
                 />
             </div>
 
@@ -101,8 +118,8 @@ export default function MarketingAgency() {
                     <div className="row">
                         {[
                             { title: "Business Service", desc: "Offering a wide range of business services, including consulting, strategy development, and operational support to drive efficiency." },
-                            { title: "Intelligent Architecture", desc: "Offering a wide range of business services, including consulting, strategy development, and operational support to drive efficiency." },
-                            { title: "Branding Service", desc: "Offering a wide range of business services, including consulting, strategy development, and operational support to drive efficiency." }
+                            { title: "Intelligent Architecture", desc: "Designing scalable and intelligent digital architectures that adapt to your business needs and future growth." },
+                            { title: "Branding Service", desc: "Creating powerful brand identities that resonate with your audience and drive meaningful connections." }
                         ].map((service, index) => (
                             <div key={index} className="col-lg-4 col-md-6 col-sm-12">
                                 <div className="agenko-iconic-box style-six mb-40 p-6 bg-[var(--agenko-surface-dark)] rounded-lg border border-[var(--agenko-border-dark)]">

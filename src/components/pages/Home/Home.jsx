@@ -3,8 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import SplashCursor from '../../SplashCursor/SplashCursor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import style from './Home.module.css';
-import aos from 'aos';
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -89,7 +88,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <SplashCursor /> */}
+      <SplashCursor />
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen bg-[var(--agenko-background-dark)] pt-[240px] md:pt-[260px] lg:pt-[280px] pb-[200px] transition-colors duration-300 overflow-hidden">

@@ -108,7 +108,7 @@ export default function Navbar() {
           <div className={`max-w-[160px] border text-center p-1 rounded-full transition-all duration-300 ${
             isScrolled 
               ? 'border-gray-700 bg-[#0E0F11]' 
-              : 'border-gray-700 bg-color-primary'
+              : 'border-gray-700 bg-agenko-primary-green'
           }`}>
             <Link to="/" className="block">
               <img src="/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto mx-auto" />
@@ -125,10 +125,10 @@ export default function Navbar() {
                 <li key={item.key} className="relative group">
                   <Link 
                     to={item.href}
-                    className={`flex items-center px-5 py-3 font-semibold text-sm capitalize rounded-full transition-all duration-300 hover:dark:text-[var(--primary-color)] hover:text-[var(--primary-color)] ${
+                    className={`flex items-center px-5 py-3 font-semibold text-sm capitalize rounded-full transition-all duration-300 hover:dark:text-[var(--agenko-primary-green)] hover:text-[var(--agenko-primary-green)] ${
                       isScrolled 
-                        ? `text-white hover:bg-gray-800 ${isActiveRoute(item.href) ? '!text-[var(--primary-color)]' : ''}` 
-                        : `text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18191B] ${isActiveRoute(item.href) ? '!text-[var(--primary-color)] dark:!text-[var(--primary-color)]' : ''}`
+                        ? `text-white hover:bg-gray-800 ${isActiveRoute(item.href) ? '!text-[var(--agenko-primary-green)]' : ''}` 
+                        : `text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18191B] ${isActiveRoute(item.href) ? '!text-[var(--agenko-primary-green)] dark:!text-[var(--agenko-primary-green)]' : ''}`
                     }`}
                   >
                     {item.label}
@@ -148,9 +148,9 @@ export default function Navbar() {
                         <li key={index}>
                           <Link 
                             to={child.href}
-                            className={`flex items-center px-4 py-2 hover:text-[var(--primary-color)] transition-all duration-300 rounded ${
+                            className={`flex items-center px-4 py-2 hover:text-[var(--agenko-primary-green)] transition-all duration-300 rounded ${
                               isScrolled ? 'text-white' : 'text-black dark:text-white'
-                            } ${isActiveRoute(child.href) ? '!text-[var(--primary-color)]' : ''}`}
+                            } ${isActiveRoute(child.href) ? '!text-[var(--agenko-primary-green)]' : ''}`}
                           >
                             {child.label}
                           </Link>
@@ -176,7 +176,7 @@ export default function Navbar() {
 
             <button onClick={toggleMobileMenu} className={`lg:hidden ml-5 p-3 border rounded transition-all duration-300 ${
               mobileMenuOpen 
-                ? 'border-[var(--primary-color)]' 
+                ? 'border-[var(--agenko-primary-green)]' 
                 : isScrolled 
                   ? 'border-gray-600' 
                   : 'border-gray-400 dark:border-gray-500'
@@ -253,8 +253,8 @@ export default function Navbar() {
                             <Link 
                               to={child.href}
                               onClick={() => setMobileMenuOpen(false)}
-                              className={`block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300 rounded ${
-                                isActiveRoute(child.href) ? '!text-[var(--primary-color)]' : ''
+                              className={`block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--agenko-primary-green)] transition-colors duration-300 rounded ${
+                                isActiveRoute(child.href) ? '!text-[var(--agenko-primary-green)]' : ''
                               }`}
                             >
                               {child.label}
@@ -272,7 +272,7 @@ export default function Navbar() {
               <Link 
                 to="/contact" 
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-center bg-[var(--primary-color)] text-black font-bold py-2.5 px-6 rounded-full hover:opacity-90 transition-all duration-300 text-sm"
+                className="block text-center bg-[var(--agenko-primary-green)] text-black font-bold py-2.5 px-6 rounded-full hover:opacity-90 transition-all duration-300 text-sm"
               >
                 <span className="flex items-center justify-center">
                   <span>LETS TALK</span>
@@ -288,7 +288,7 @@ export default function Navbar() {
                   <li key={social}>
                     <a 
                       href="#" 
-                      className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300"
+                      className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--agenko-primary-green)] hover:text-white hover:border-[var(--agenko-primary-green)] transition-all duration-300"
                     >
                       <FontAwesomeIcon 
                         icon={['fab', social]} 

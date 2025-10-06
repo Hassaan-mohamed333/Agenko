@@ -2,8 +2,10 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
+import CounterSection from '../../CounterSection/CounterSection';
+import PageBanner from '@/components/PageBanner/PageBanner';
 
-// تسجيل ScrollTrigger
+
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -13,31 +15,31 @@ const teamMembers = [
     id: 1,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '@/src/assets/images/pages/team/team1.jpg', 
+    image: '/images/pages/team/team1.jpg', 
   },
   {
     id: 2,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '@/src/assets/images/pages/team/team2.jpg',
+    image: '/images/pages/team/team2.jpg',
   },
   {
     id: 3,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '@/src/assets/images/pages/team/team3.jpg',
+    image: '/images/pages/team/team3.jpg',
   },
   {
     id: 4,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '@/src/assets/images/pages/team/team4.jpg',
+    image: '/images/pages/team/team4.jpg',
   },
   {
     id: 5,
     name: 'Miss. Alex Mika',
     position: 'CEO & Founder',
-    image: '/src/assets/images/pages/team/team5.jpg',
+    image: '/images/pages/team/team5.jpg',
   },
 ];
 
@@ -90,7 +92,7 @@ export default function About() {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // أنيميشن fadeup
+      
       gsap.utils.toArray('.pf_fadeup').forEach((element) => {
         gsap.fromTo(
           element,
@@ -111,7 +113,7 @@ export default function About() {
         );
       });
 
-      // أنيميشن zoomIn
+     
       gsap.utils.toArray('.pf_zoomIn').forEach((element) => {
         gsap.fromTo(
           element,
@@ -137,6 +139,8 @@ export default function About() {
   }, []);
 
   return (
+      
+    
     <div ref={sectionRef}>
       {/* Features Section */}
       <section className="bg-[#18191B] pt-32 pb-24">
@@ -166,6 +170,8 @@ export default function About() {
               </div>
             </div>
           </div>
+
+          
 
           <div className="flex flex-wrap -mx-4">
             <div className="w-full sm:w-1/2 lg:w-1/4 px-4">
@@ -243,6 +249,8 @@ export default function About() {
         </div>
       </section>
 
+
+      <CounterSection />
       {/* Team Section */}
       <section className="bg-[#0E0F11] pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-7xl">
