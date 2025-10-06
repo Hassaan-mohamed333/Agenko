@@ -55,9 +55,9 @@ export default function Navbar() {
       href: 'Home',
       hasChildren: true,
       children: [
-        { label: 'Creative Agency', href: 'index.html' },
-        { label: 'Digital Agency', href: 'index-2.html' },
-        { label: 'Marketing Agency', href: 'index-3.html' }
+        { label: 'Creative Agency', href: 'Home' },
+        { label: 'Digital Agency', href: 'Home' },
+        { label: 'Marketing Agency', href: 'MarketingAgency' }
       ]
     },
     {

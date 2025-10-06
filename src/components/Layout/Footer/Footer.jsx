@@ -3,12 +3,12 @@ import style from './Footer.module.css';
 
 export default function Footer() {
   return (
-    <footer className="agenko-footer bg-[var(--gray-dark)] pt-32 relative overflow-hidden">
+    <footer className="agenko-footer bg-[var(--agenko-background-dark)] pt-32 relative overflow-hidden">
       
-      <div className="shape shape-one absolute left-0 bottom-24 z-0">
+      <div className="shape shape-one max-w-1/4 absolute left-0 bottom-24 z-0">
         <span>
           <img
-            src="/assets/images/element1.png"
+            src="/images/element1.png"
             alt="Shape"
             className={style.rotate360}  
           />
@@ -17,7 +17,7 @@ export default function Footer() {
       <div className="shape shape-two absolute right-0 bottom-36 z-[0]">
         <span>
           <img
-            src="/assets/images/element2.png"
+            src="/images/element2.png"
             alt="Shape"
             className={style.rotate360}  
           />

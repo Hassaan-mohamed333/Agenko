@@ -2,7 +2,7 @@ import React from 'react';
 
 const BlogSection = () => {
   return (
-    <section className="py-20 bg-[var(--body-bg)]">
+    <section className="py-20 bg-[var(--agenko-background-dark)]">
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <div className="flex flex-wrap items-center mb-12">

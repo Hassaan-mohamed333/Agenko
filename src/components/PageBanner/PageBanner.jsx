@@ -9,13 +9,13 @@ export default function PageBanner({
   ],
   showIcon = true,
   showCircle = true,
-  iconImage = "@/images/pages/shape//star1.png",
-  circleImage = "@/images/pages/shape/circle-shape1.png",
+  iconImage = "/images/pages/shape//star1.png",
+  circleImage = "/images/pages/shape/circle-shape1.png",
   className = ""
 }) {
   return (
     
-    <section className={`p-auto m-auto justify-center relative overflow-hidden z-0 bg-var(--body-bg) dark:bg-[var(--background)] py-48 lg:py-48 md:py-32 ${className}`}>
+    <section className={`p-auto m-auto justify-center relative overflow-hidden z-0 bg-[var(--agenko-background-dark)]  py-48 lg:py-48 md:py-32 ${className}`}>
       
     
       {showCircle && (

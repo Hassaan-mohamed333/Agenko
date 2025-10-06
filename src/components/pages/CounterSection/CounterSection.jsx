@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ThemeButton from '../../ThemeButton/ThemeButton.jsx';
+import ThemeButton from '../../ThemeButton/ThemeButton';
 export default function CounterSection() {
     const [projectCount, setProjectCount] = useState(0)
     const [awardCount, setAwardCount] = useState(0)
@@ -83,7 +83,7 @@ export default function CounterSection() {
                                 className="w-full rounded-3xl"
                             />
                             
-                            <div className="absolute lg:-left-12 left-4 top-1/3 bg-[var(--primary-color)] text-black rounded-xl px-6 py-5 text-center max-w-[160px] shadow-lg">
+                            <div className="absolute lg:-left-12 left-4 top-1/3 bg-[var(--agenko-primary-green)] text-black rounded-xl px-6 py-5 text-center max-w-[160px] shadow-lg">
                                 <h2 className="text-4xl font-bold mb-2">
                                     {yearsCount}+
                                 </h2>
