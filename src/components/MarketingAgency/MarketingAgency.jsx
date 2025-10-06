@@ -29,23 +29,27 @@ export default function MarketingAgency() {
                     <div className="container mx-auto px-4">
                         <div className="row">
                             <div className="col-lg-12">
-                                <div className="hero-content mb-70">
-                                    <h1 className="text-[var(--agenko-heading-light)] text-4xl lg:text-6xl font-bold">
-                                        Agency For Growth Through Innovative <span className="text-[var(--agenko-primary-green)]">Marketing.</span>
-                                    </h1>
-                                </div>
+                                <div className="hero-content mb-16 fade-up">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+        Agency For Growth Through Innovative 
+        <span className="text-blue-600 dark:text-black relative z-2 ml-1">  Marketing.</span>
+    </h1>
+</div>
                             </div>
                         </div>
                     </div>
                     
-                    <div className="hero-image-box text-center">
+                    <div className="hero-image-box text-center mx-15 relative">
                         <img 
                             src="/images/marketing-agency/hero/hero-img1.jpg" 
                             alt="Hero Image" 
                             className="mx-auto rounded-lg"
                         />
-                        <div className="text-box mt-8 max-w-2xl mx-auto">
-                            <p className="text-[var(--agenko-text-muted)] text-lg">
+                        <svg className='right-[-1px] top-[-1px] absolute ' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M42 92V41.5C42 18.5802 23.4198 0 0.5 0H834.5V171.999C834.5 149.907 816.591 132 794.5 132H82C59.9086 132 42 114.091 42 92Z" fill="#0E0F11"></path>
+                                </svg>
+                        <div className="text-box  max-w-2xl mx-auto  right-[-1px] top-[-1px] absolute bg-[var(--agenko-background-dark)] ">
+                            <p className="text-[var(--agenko-text-muted)] text-lg ">
                                 A <span className="text-[var(--agenko-primary-green)]">digital marketing agency</span> focused delivering innovative strategies to accelerate business growth, enhance brand visibility, and increase customer engagement, using data-driven approaches.
                             </p>
                         </div>
