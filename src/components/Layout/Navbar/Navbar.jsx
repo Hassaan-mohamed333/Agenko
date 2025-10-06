@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { faAngleDown, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faTwitter, faLinkedinIn, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import Switch from '../Toggle-switches/Toggle-switches';
 import ThemeButton from '../../ThemeButton/ThemeButton';
-import '../../../index.css';
 
 library.add(faAngleDown, faArrowRight, faFacebookF, faTwitter, faLinkedinIn, faYoutube);
 
@@ -14,6 +14,7 @@ export default function Navbar() {
   const [openDropdowns, setOpenDropdowns] = useState({});
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   // Effect for scroll detection
   useEffect(() => {
@@ -48,16 +49,21 @@ export default function Navbar() {
     }));
   };
 
+  const isActiveRoute = (href) => {
+    if (href === '/') return location.pathname === '/';
+    return location.pathname === href || location.pathname.includes(href);
+  };
+
   const menuItems = [
     {
       label: 'Home',
       key: 'home',
-      href: 'Home',
+      href: '/',
       hasChildren: true,
       children: [
-        { label: 'Creative Agency', href: 'Home' },
-        { label: 'Digital Agency', href: 'Home' },
-        { label: 'Marketing Agency', href: 'MarketingAgency' }
+        { label: 'Creative Agency', href: '/' },
+        { label: 'Digital Agency', href: '/home' },
+        { label: 'Marketing Agency', href: '/marketing-agency' }
       ]
     },
     {
@@ -66,42 +72,27 @@ export default function Navbar() {
       href: '#',
       hasChildren: true,
       children: [
-        { label: 'About-Us', href: 'About' },
-        { label: 'Our Services', href: 'services.html' },
-        { label: 'Service Details', href: 'service-details.html' },
-        { label: 'Our Team', href: 'team.html' },
-        { label: 'Team Details', href: 'team-details.html' },
-        { label: 'Pricing', href: 'pricing.html' },
-        { label: 'Faqs', href: 'faqs.html' },
-        { label: 'Contact Us', href: 'contact.html' },
-        { label: '404', href: '404.html' }
+        { label: 'About Us', href: '/about' },
+        { label: 'Our Services', href: '/services' },
+        { label: 'Contact Us', href: '/contact' }
       ]
     },
     {
       label: 'Portfolio',
       key: 'portfolio',
-      href: '#',
-      hasChildren: true,
-      children: [
-        { label: 'Projects', href: 'projects.html' },
-        { label: 'Project Details', href: 'project-details.html' }
-      ]
+      href: '/portfolio',
+      hasChildren: false
     },
     {
       label: 'Blog',
       key: 'blog',
-      href: '#',
-      hasChildren: true,
-      children: [
-        { label: 'Blog Grid', href: 'blog-grid.html' },
-        { label: 'Blog Standard', href: 'blog-standard.html' },
-        { label: 'Blog Details', href: 'blog-details.html' }
-      ]
+      href: '/blog',
+      hasChildren: false
     },
     {
       label: 'Contact',
       key: 'contact',
-      href: 'contact',
+      href: '/contact',
       hasChildren: false
     }
   ];
@@ -119,9 +110,9 @@ export default function Navbar() {
               ? 'border-gray-700 bg-[#0E0F11]' 
               : 'border-gray-700 bg-color-primary'
           }`}>
-            <a href="index.html" className="block">
+            <Link to="/" className="block">
               <img src="/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto mx-auto" />
-            </a>
+            </Link>
           </div>
 
           <nav className={`hidden lg:flex items-center border rounded-full p-1 ml-8 transition-all duration-300 ${
@@ -132,18 +123,21 @@ export default function Navbar() {
             <ul className="flex items-center">
               {menuItems.map((item) => (
                 <li key={item.key} className="relative group">
-                  <a href={item.href} className={`flex items-center px-5 py-3 font-semibold text-sm capitalize rounded-full transition-all duration-300 hover:dark:text-[var(--primary-color)] hover:text-[var(--primary-color)] ${
-                    isScrolled 
-                      ? 'text-white hover:bg-gray-800' 
-                      : 'text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18191B]'
-                  }`}>
+                  <Link 
+                    to={item.href}
+                    className={`flex items-center px-5 py-3 font-semibold text-sm capitalize rounded-full transition-all duration-300 hover:dark:text-[var(--primary-color)] hover:text-[var(--primary-color)] ${
+                      isScrolled 
+                        ? `text-white hover:bg-gray-800 ${isActiveRoute(item.href) ? '!text-[var(--primary-color)]' : ''}` 
+                        : `text-black dark:text-white hover:bg-gray-100 dark:hover:bg-[#18191B] ${isActiveRoute(item.href) ? '!text-[var(--primary-color)] dark:!text-[var(--primary-color)]' : ''}`
+                    }`}
+                  >
                     {item.label}
                     {item.hasChildren && (
                       <span className="ml-2">
                         <FontAwesomeIcon icon={faAngleDown} className="text-xs" />
                       </span>
                     )}
-                  </a>
+                  </Link>
                   {item.hasChildren && (
                     <ul className={`absolute left-0 top-full mt-2 w-64 border rounded-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl z-50  ${
                       isScrolled 
@@ -152,11 +146,14 @@ export default function Navbar() {
                     }`}>
                       {item.children.map((child, index) => (
                         <li key={index}>
-                          <a href={child.href} className={`flex items-center px-4 py-2 hover:text-[var(--primary-color)] transition-all duration-300 rounded ${
-                            isScrolled ? 'text-white' : 'text-black dark:text-white'
-                          }`}>
+                          <Link 
+                            to={child.href}
+                            className={`flex items-center px-4 py-2 hover:text-[var(--primary-color)] transition-all duration-300 rounded ${
+                              isScrolled ? 'text-white' : 'text-black dark:text-white'
+                            } ${isActiveRoute(child.href) ? '!text-[var(--primary-color)]' : ''}`}
+                          >
                             {child.label}
-                          </a>
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -168,11 +165,10 @@ export default function Navbar() {
 
           <div className="flex items-center justify-end flex-grow">
             <div className="hidden md:block">
-             <ThemeButton text="LETS TALK" href="about.html" />
+              <ThemeButton text="LETS TALK" href="/contact" />
             </div>
 
             <div className="ml-4 flex items-center">
-              {/* زيادة حجم التوجل سويتش */}
               <div className="scale-150 transform origin-center">
                 <Switch isChecked={isDarkMode} onChange={toggleDarkMode} />
               </div>
@@ -215,9 +211,9 @@ export default function Navbar() {
         }`}>
           <div className="p-5">
             <div className="text-center mb-5">
-              <a href="index.html" className="inline-block">
+              <Link to="/" className="inline-block" onClick={() => setMobileMenuOpen(false)}>
                 <img src="/images/logo-main.png" alt="Brand Logo" className="h-10 w-auto" />
-              </a>
+              </Link>
             </div>
 
             <nav className="mt-8">
@@ -225,22 +221,44 @@ export default function Navbar() {
                 {menuItems.map((item, index) => (
                   <li key={item.key} className={`border-b border-gray-300 dark:border-gray-700 ${index === menuItems.length - 1 ? 'border-b-0' : ''}`}>
                     <div className="relative">
-                      <a href={item.href} className="flex items-center justify-between py-3 text-black dark:text-white text-base font-medium">
-                        {item.label}
-                        {item.hasChildren && (
-                          <button onClick={(e) => { e.preventDefault(); toggleDropdown(item.key); }} className="p-2 rounded">
-                            <FontAwesomeIcon icon={faAngleDown} className={`transition-transform duration-300 text-sm ${openDropdowns[item.key] ? 'rotate-180' : ''}`} />
+                      {item.hasChildren ? (
+                        <div className="flex items-center justify-between py-3">
+                          <span className="text-black dark:text-white text-base font-medium">
+                            {item.label}
+                          </span>
+                          <button 
+                            onClick={() => toggleDropdown(item.key)} 
+                            className="p-2 rounded"
+                          >
+                            <FontAwesomeIcon 
+                              icon={faAngleDown} 
+                              className={`transition-transform duration-300 text-sm ${openDropdowns[item.key] ? 'rotate-180' : ''}`} 
+                            />
                           </button>
-                        )}
-                      </a>
+                        </div>
+                      ) : (
+                        <Link 
+                          to={item.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="flex items-center justify-between py-3 text-black dark:text-white text-base font-medium"
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </div>
                     {item.hasChildren && (
                       <ul className={`ml-3 space-y-1 overflow-hidden transition-all duration-300 ${openDropdowns[item.key] ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                         {item.children.map((child, childIndex) => (
                           <li key={childIndex}>
-                            <a href={child.href} className="block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300 rounded">
+                            <Link 
+                              to={child.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`block py-2 px-3 text-sm text-gray-600 dark:text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300 rounded ${
+                                isActiveRoute(child.href) ? '!text-[var(--primary-color)]' : ''
+                              }`}
+                            >
                               {child.label}
-                            </a>
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -251,37 +269,34 @@ export default function Navbar() {
             </nav>
 
             <div className="mt-6">
-              <a href="contact.html" className="block text-center bg-[var(--primary-color)] text-black font-bold py-2.5 px-6 rounded-full hover:opacity-90 transition-all duration-300 text-sm">
+              <Link 
+                to="/contact" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-center bg-[var(--primary-color)] text-black font-bold py-2.5 px-6 rounded-full hover:opacity-90 transition-all duration-300 text-sm"
+              >
                 <span className="flex items-center justify-center">
                   <span>LETS TALK</span>
                   <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-xs" />
                 </span>
-              </a>
+              </Link>
             </div>
 
             <div className="mt-8">
               <h5 className="text-black dark:text-white font-medium mb-4 text-sm">Follow Us</h5>
               <ul className="flex space-x-2">
-                <li>
-                  <a href="#" className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300">
-                    <FontAwesomeIcon icon={faFacebookF} className="text-xs" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300">
-                    <FontAwesomeIcon icon={faTwitter} className="text-xs" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300">
-                    <FontAwesomeIcon icon={faLinkedinIn} className="text-xs" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300">
-                    <FontAwesomeIcon icon={faYoutube} className="text-xs" />
-                  </a>
-                </li>
+                {['facebook', 'twitter', 'linkedin', 'youtube'].map((social) => (
+                  <li key={social}>
+                    <a 
+                      href="#" 
+                      className="flex items-center justify-center w-9 h-9 border border-gray-300 dark:border-gray-700 rounded-full text-black dark:text-white hover:bg-[var(--primary-color)] hover:text-white hover:border-[var(--primary-color)] transition-all duration-300"
+                    >
+                      <FontAwesomeIcon 
+                        icon={['fab', social]} 
+                        className="text-xs" 
+                      />
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
