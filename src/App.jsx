@@ -2,12 +2,12 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout/Layout";
-import Home from "./components/pages/Home/Home";
-import Blog from "./components/pages/Blog/Blog";
-import Contact from "./components/pages/Contact/Contact";
-import Portfolio from "./components/pages/Portfolio/Portfolio";
-import About from "./components/pages/Pages/About/About";
-import Notfound from "./components/pages/Notfound/Notfound";
+import Home from "./pages/Home/Home";
+import Blog from "./pages/Blog/Blog";
+import Contact from "./pages/Contact/Contact";
+import Portfolio from "./pages/Portfolio/Portfolio";
+import About from "./pages/Pages/About/About";
+import Notfound from "./pages/Notfound/Notfound";
 import MarketingAgencyt from "./components/MarketingAgency/MarketingAgency";
 
 const router = createBrowserRouter([

@@ -1,1 +1,34 @@
-.MarketingAgency {}
+.fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-flip {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    height: 1.2em;
+}
+
+.text-flip .text {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.text-flip:hover .text:first-child {
+    transform: translateY(-100%);
+}
+
+.text-flip:hover .text:last-child {
+    transform: translateY(-100%);
+}

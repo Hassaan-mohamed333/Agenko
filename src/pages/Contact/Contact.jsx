@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Facebook, Instagram, Linkedin, Twitter, MapPin, Mail } from 'lucide-react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import PageBanner from '../../PageBanner/PageBanner';
+import PageBanner from '@/components/PageBanner/PageBanner';
 import { Link } from 'react-router-dom';
+
 
 export default function ContactSection() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,6 +51,8 @@ export default function ContactSection() {
     return (
           <>
            <PageBanner />
+
+       
         <section className="py-20 px-4 bg-[#0E0F11] min-h-screen">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -274,10 +277,20 @@ export default function ContactSection() {
 
 
 
-        <section classname="agenko-map">
+        <section className="agenko-map">
   {/*=== Map Box ===*/}
-  <div classname="map-box" data-aos="fade-up" data-aos-duration={1300}>
-    <iframe classname="w-full h-96 md:h-[450px] lg:h-[550px] border-0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d21485.720898662676!2d31.580006682115418!3d31.09519629711705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdickens!5e0!3m2!1sen!2sus!4v1759535671100!5m2!1sen!2sus" width={600} height={450} style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Location Map" />
+  <div className="map-box" data-aos="fade-up" data-aos-duration={1300}>
+    <iframe 
+      className="w-full h-96 md:h-[450px] lg:h-[550px] border-0" 
+      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d21485.720898662676!2d31.580006682115418!3d31.09519629711705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdickens!5e0!3m2!1sen!2sus!4v1759535671100!5m2!1sen!2sus" 
+      width={600} 
+      height={450} 
+      style={{border: 0}} 
+      allowFullScreen 
+      loading="lazy" 
+      referrerPolicy="no-referrer-when-downgrade" 
+      title="Location Map" 
+    />
   </div>
 </section>
 

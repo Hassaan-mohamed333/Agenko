@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ThemeButton from '../../ThemeButton/ThemeButton';
+import ThemeButton from '../ThemeButton/ThemeButton';
 export default function CounterSection() {
     const [projectCount, setProjectCount] = useState(0)
     const [awardCount, setAwardCount] = useState(0)

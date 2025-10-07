@@ -1,0 +1,14 @@
+/* حركة دوران بطيئة */
+.slow-spin {
+  animation: spin 8s linear infinite;
+}
+
+/* حركة أبطأ */
+.slower-spin {
+  animation: spin 12s linear infinite;
+}
+
+/* حركة متنوعة */
+.spin-variable {
+  animation: spin 6s linear infinite;
+}

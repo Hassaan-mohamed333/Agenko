@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", // خلي الـ dark بالـ class
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -31,17 +31,24 @@ module.exports = {
       borderRadius: {
         DEFAULT: "var(--radius)",
       },
-       animation: {
+      animation: {
         rotate360: 'rotate360 10s linear infinite',
+        marquee: 'marquee 20s linear infinite', 
       },
-       keyframes: {
+      keyframes: {
         rotate360: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+        marquee: { 
+          'from': { transform: 'translateX(0%)' },
+          'to': { transform: 'translateX(-50%)' }
+        }
       },
+      transitionDuration: { 
+        '600': '600ms',
+      }
     },
   },
   plugins: [],
-  
 };

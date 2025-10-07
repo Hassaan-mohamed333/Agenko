@@ -1,7 +1,11 @@
 import React from 'react';
 import LogoLoop from '../LogoLoop/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
-import CounterSection from '../pages/CounterSection/CounterSection';
+import CounterSection from '../CounterSection/CounterSection';
+import { Link } from 'react-router-dom';
+import ThemeButton from '@/components/ThemeButton/ThemeButton';
+import SingleTestimonialSection from '../../components/testimonial/testimonial';
+
 
 export default function MarketingAgency() {
     const techLogos = [
@@ -44,8 +48,11 @@ export default function MarketingAgency() {
                             alt="Hero Image" 
                             className="mx-auto rounded-lg"
                         />
-                        <svg className='right-[-1px] top-[-1px] absolute' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className='right-[-1px] top-[-1px]  absolute' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M42 92V41.5C42 18.5802 23.4198 0 0.5 0H834.5V171.999C834.5 149.907 816.591 132 794.5 132H82C59.9086 132 42 114.091 42 92Z" fill="#0E0F11"></path>
+                        </svg>
+                        <svg className='right-[-1px] top-[-1px] dark:hidden absolute' width="835" height="172" viewBox="0 0 835 172" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42 92V41.5C42 18.5802 23.4198 0 0.5 0H834.5V171.999C834.5 149.907 816.591 132 794.5 132H82C59.9086 132 42 114.091 42 92Z" fill="#ffff"></path>
                         </svg>
                         <div className="text-box max-w-2xl mx-auto right-[-1px] top-[-1px] absolute bg-[var(--agenko-background-dark)]">
                             <p className="text-[var(--agenko-text-muted)] text-lg">
@@ -143,114 +150,178 @@ export default function MarketingAgency() {
             </section>
 
             {/* Project Section */}
-            <section className="agk-project bg-[var(--agenko-background-dark)] py-20">
-                <div className="container mx-auto px-4">
-                    <div className="row align-items-end">
-                        <div className="col-lg-6">
-                            <div className="section-title mb-55">
-                                <span className="sub-title text-[var(--agenko-primary-green)] border border-[var(--agenko-primary-green)] px-4 py-2 rounded-full">
-                                    Complete work
-                                </span>
-                                <h2 className="text-[var(--agenko-heading-light)] text-3xl lg:text-4xl font-bold mt-4">
-                                    We are leading Innovative marketing agency.
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="agk-button float-lg-end mb-60">
-                                <a href="projects.html" className="theme-btn style-one bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] px-6 py-3 rounded-lg font-semibold hover:bg-[var(--agenko-primary-green)]/90 transition-colors">
-                                    LEARN MORE
+            {/*======  Start Project Section  ======*/}
+<section className="agk-project pt-20 pb-24 bg-[var(--agenko-background-dark)]">
+    <div className="container mx-auto px-4">
+        <div className="flex flex-wrap items-end justify-between mb-12">
+            <div className="w-full lg:w-6/12 mb-6 lg:mb-0">
+                {/*=== Section Title ===*/}
+                <div className="section-title mb-12 fade-up">
+                    <span className="sub-title text-[var(--agenko-primary-green)] border border-[var(--agenko-primary-green)] px-4 py-2 rounded-full text-sm font-medium">
+                        Complete work
+                    </span>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[var(--agenko-heading-light)] mt-4 leading-tight">
+                        We are leading Innovative
+                        marketing agency.
+                    </h2>
+                </div>
+            </div>
+            <div className="w-full lg:w-6/12">
+                {/*=== Agk Button ===*/}
+                <div className="agk-button float-lg-end mb-14 fade-up">
+                    <Link 
+                        to="/projects" 
+                        className="theme-btn style-one bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] px-6 py-3 rounded-lg font-semibold hover:bg-[var(--agenko-primary-green)]/90 transition-colors inline-block"
+                    >
+                        <span className="text-flip">
+                            <span className="text">LEARN MORE</span>
+                            <span className="text">LEARN MORE</span>
+                        </span>
+                    </Link>
+                </div>
+            </div>
+        </div>
+        <div className="flex flex-wrap -mx-4">
+            <div className="w-full lg:w-6/12 px-4">
+                {/*=== Agk Project Item ===*/}
+                <div className="agenko-project-item style-three mb-12 fade-up">
+                    <div className="thumbnail relative overflow-hidden rounded-lg group">
+                        <img 
+                            src="/images/marketing-agency/project/project1.jpg" 
+                            alt="Project Image" 
+                            className="w-full transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="hover-content absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="project-categories flex gap-2">
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Website
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Landing Page
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    UI/UX
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-lg-6">
-                            {[1,2].map((item) => (
-                                <div key={item} className="agenko-project-item style-three mb-50">
-                                    <div className="thumbnail relative overflow-hidden rounded-lg mb-4">
-                                        <img 
-                                            src={`/images/marketing-agency/project/project${item}.jpg`} 
-                                            alt="Project Image" 
-                                            className="w-full hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <div className="content">
-                                        <h4 className="text-[var(--agenko-heading-light)] text-xl font-bold mb-2 hover:text-[var(--agenko-primary-green)] transition-colors">
-                                            <a href="project-details.html">Project Title {item}</a>
-                                        </h4>
-                                        <p className="text-[var(--agenko-text-muted)]">Project description goes here...</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="col-lg-6">
-                            {[3,4].map((item) => (
-                                <div key={item} className="agenko-project-item style-three mt-50">
-                                    <div className="thumbnail relative overflow-hidden rounded-lg mb-4">
-                                        <img 
-                                            src={`/images/marketing-agency/project/project${item}.jpg`} 
-                                            alt="Project Image" 
-                                            className="w-full hover:scale-110 transition-transform duration-500"
-                                        />
-                                    </div>
-                                    <div className="content">
-                                        <h4 className="text-[var(--agenko-heading-light)] text-xl font-bold mb-2 hover:text-[var(--agenko-primary-green)] transition-colors">
-                                            <a href="project-details.html">Project Title {item}</a>
-                                        </h4>
-                                        <p className="text-[var(--agenko-text-muted)]">Project description goes here...</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="content mt-4">
+                        <h4 className="text-xl font-bold text-[var(--agenko-heading-light)] hover:text-[var(--agenko-primary-green)] transition-colors">
+                            <Link to="/project-details">Daily Schedule Mobile Apps</Link>
+                        </h4>
+                        <p className="text-[var(--agenko-text-muted)] mt-2">
+                            A daily schedule app designed to help users efficiently plan, organize, activities.
+                        </p>
                     </div>
                 </div>
-            </section>
+                
+                {/*=== Agk Project Item ===*/}
+                <div className="agenko-project-item style-three mb-12 fade-up">
+                    <div className="thumbnail relative overflow-hidden rounded-lg group">
+                        <img 
+                            src="/images/marketing-agency/project/project2.jpg" 
+                            alt="Project Image" 
+                            className="w-full transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="hover-content absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="project-categories flex gap-2">
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Website
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Landing Page
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    UI/UX
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content mt-4">
+                        <h4 className="text-xl font-bold text-[var(--agenko-heading-light)] hover:text-[var(--agenko-primary-green)] transition-colors">
+                            <Link to="/project-details">Rawr Studio Website</Link>
+                        </h4>
+                        <p className="text-[var(--agenko-text-muted)] mt-2">
+                            Rawr Studio is a creative agency specializing in bold, innovative designs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="w-full lg:w-6/12 px-4">
+                {/*=== Agk Project Item ===*/}
+                <div className="agenko-project-item style-three mt-12 lg:mt-0 fade-up">
+                    <div className="thumbnail relative overflow-hidden rounded-lg group">
+                        <img 
+                            src="/images/marketing-agency/project/project3.jpg" 
+                            alt="Project Image" 
+                            className="w-full transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="hover-content absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="project-categories flex gap-2">
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Website
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Landing Page
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    UI/UX
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content mt-4">
+                        <h4 className="text-xl font-bold text-[var(--agenko-heading-light)] hover:text-[var(--agenko-primary-green)] transition-colors">
+                            <Link to="/project-details">Nexus Production Landing Page</Link>
+                        </h4>
+                        <p className="text-[var(--agenko-text-muted)] mt-2">
+                            A production company delivering innovative solutions for film, video, and media.
+                        </p>
+                    </div>
+                </div>
+                
+                {/*=== Agk Project Item ===*/}
+                <div className="agenko-project-item style-three mt-12 fade-up">
+                    <div className="thumbnail relative overflow-hidden rounded-lg group">
+                        <img 
+                            src="/images/marketing-agency/project/project4.jpg" 
+                            alt="Project Image" 
+                            className="w-full transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="hover-content absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div className="project-categories flex gap-2">
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Website
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    Landing Page
+                                </a>
+                                <a href="#" className="px-4 py-2 bg-white text-gray-900 rounded-full text-sm hover:bg-[var(--agenko-primary-green)] transition-colors">
+                                    UI/UX
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="content mt-4">
+                        <h4 className="text-xl font-bold text-[var(--agenko-heading-light)] hover:text-[var(--agenko-primary-green)] transition-colors">
+                            <Link to="/project-details">Financial Claim Dashboard</Link>
+                        </h4>
+                        <p className="text-[var(--agenko-text-muted)] mt-2">
+                            A dashboard designed for tracking, managing, and streamlining financial claims.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{/*======  End Project Section  ======*/}
 
             {/* Features Section */}
-            <section className="agk-features bg-[var(--agenko-background-dark)] py-20">
-                <div className="container mx-auto px-4">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="section-title mb-45">
-                                <span className="sub-title text-[var(--agenko-primary-green)] border border-[var(--agenko-primary-green)] px-4 py-2 rounded-full">
-                                    How We Are
-                                </span>
-                                <h2 className="text-[var(--agenko-heading-light)] text-3xl lg:text-4xl font-bold mt-4">
-                                    We are leading Innovative marketing agency.
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="text-box mb-40">
-                                <p className="text-[var(--agenko-text-muted)]">
-                                    Leading Innovation <span className="text-[var(--agenko-primary-green)]">marketing agency</span> We are a leading innovative marketing agency, specializing in creative solutions that drive business growth, enhance brand visibility.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {['Research', 'Planning', 'Development', 'Deployment'].map((feature, index) => (
-                            <div key={index} className="col-lg-3 col-md-6 col-sm-12">
-                                <div className="agenko-iconic-box style-seven mb-40 p-6 bg-[var(--agenko-surface-dark)] rounded-lg border border-[var(--agenko-border-dark)]">
-                                    <div className="icon text-[var(--agenko-primary-green)] text-2xl mb-3">
-                                        <i className="flaticon-social-media-marketing"></i>
-                                    </div>
-                                    <div className="content">
-                                        <h4 className="text-[var(--agenko-heading-light)] text-lg font-bold mb-2">{feature}</h4>
-                                        <p className="text-[var(--agenko-text-muted)] text-sm">
-                                            We are a leading innovative marketing agency, specializing
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+      
 
             {/* Testimonial Section */}
-            <section className="agenko-testimonial bg-[var(--agenko-background-dark)] py-20">
+            {/* <section className="agenko-testimonial bg-[var(--agenko-background-dark)] py-20">
                 <div className="container mx-auto px-4">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
@@ -309,82 +380,70 @@ export default function MarketingAgency() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
+            <SingleTestimonialSection />
 
             {/* CTA Section */}
-            <section className="agk-cta bg-[var(--agenko-background-dark)]">
-                <div className="agenko-cta-wrappber py-20">
-                    <div className="container mx-auto px-4">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="section-title mb-30">
-                                    <h2 className="text-[var(--agenko-heading-light)] text-3xl lg:text-4xl font-bold">
-                                        Ground-up to product design Sector.
-                                    </h2>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="agenko-button float-lg-end mb-40">
-                                    <a href="contact.html" className="theme-btn style-one bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] px-6 py-3 rounded-lg font-semibold hover:bg-[var(--agenko-primary-green)]/90 transition-colors">
-                                        Contact With Us
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <section className="agk-cta bg-[var(--agenko-background-dark)] relative overflow-hidden">
+  {/* خلفيات ديكورية */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute top-1/4 left-10 w-72 h-72 bg-[var(--agenko-primary-green)] rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[var(--agenko-primary-green)] rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+  </div>
+  
+  <div className="agenko-cta-wrapper py-20 lg:py-24 relative z-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        
+        {/* النص */}
+        <div className="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+          <div className="section-title mb-8 lg:mb-0">
+            <span className="inline-block px-4 py-2 text-sm font-medium text-[var(--agenko-primary-green)] border border-[var(--agenko-primary-green)] rounded-full bg-[var(--agenko-primary-green)]/10 mb-4 transition-all duration-300 hover:bg-[var(--agenko-primary-green)]/20 hover:scale-105">
+              🚀 Let's Build Together
+            </span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--agenko-heading-light)] leading-tight">
+              From <span className="text-[var(--agenko-primary-green)]">Ground-up</span> to<br />
+              Product Design Excellence
+            </h2>
+            <p className="text-lg text-[var(--agenko-text-muted)] mt-4 max-w-2xl">
+              Transform your vision into reality with our end-to-end product design solutions. 
+              We craft digital experiences that drive results.
+            </p>
+          </div>
+        </div>
+
+        {/* الزر والإجراء */}
+        <div className="lg:w-1/2 lg:flex lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+          <div className="text-center lg:text-right">
+            <div className="agenko-button mb-6 lg:mb-8">
+             <ThemeButton text="Learn More" href="about.html" />
+            </div>
+            
+            {/* معلومات إضافية */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-end text-sm text-[var(--agenko-text-muted)]">
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
+                <div className="w-2 h-2 bg-[var(--agenko-primary-green)] rounded-full animate-pulse"></div>
+                <span>Free Consultation</span>
+              </div>
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
+                <div className="w-2 h-2 bg-[var(--agenko-primary-green)] rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2 justify-center lg:justify-start">
+                <div className="w-2 h-2 bg-[var(--agenko-primary-green)] rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+                <span>Quick Response</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
             {/* Blog Section */}
-            <section className="agenko-blog bg-[var(--agenko-background-dark)] py-20">
-                <div className="container mx-auto px-4">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6">
-                            <div className="section-title mb-50">
-                                <span className="sub-title text-[var(--agenko-primary-green)] border border-[var(--agenko-primary-green)] px-4 py-2 rounded-full">
-                                    Latest Blogs
-                                </span>
-                                <h2 className="text-[var(--agenko-heading-light)] text-3xl lg:text-4xl font-bold mt-4">
-                                    Expert Insights and News Stay Ahead with Us
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="text-box mb-40">
-                                <p className="text-[var(--agenko-text-muted)]">
-                                    Explore expert insights, industry trends, and the latest digital news to keep your business informed and ahead of the competition
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        {[1,2].map((item) => (
-                            <div key={item} className="col-lg-6">
-                                <div className="agenko-blog-item style-three mb-40 bg-[var(--agenko-surface-dark)] rounded-lg overflow-hidden">
-                                    <div className="post-thumbnail">
-                                        <img 
-                                            src={`/images/marketing-agency/blog/blog${item}.jpg`} 
-                                            alt="Blog Image" 
-                                            className="w-full h-48 object-cover"
-                                        />
-                                    </div>
-                                    <div className="post-content-wrap p-6">
-                                        <div className="post-content">
-                                            <div className="post-meta flex gap-4 text-[var(--agenko-text-muted)] text-sm mb-3">
-                                                <span><a href="#" className="hover:text-[var(--agenko-primary-green)]">Web Design</a></span>
-                                                <span><a href="#" className="hover:text-[var(--agenko-primary-green)]">02 Oct, 2025</a></span>
-                                            </div>
-                                            <h4 className="title text-[var(--agenko-heading-light)] text-xl font-bold mb-3 hover:text-[var(--agenko-primary-green)] transition-colors">
-                                                <a href="blog-details.html">Blog Post Title {item}</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+      
         </>
     );
 }

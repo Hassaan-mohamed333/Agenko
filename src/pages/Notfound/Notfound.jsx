@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import FuzzyText from "../../Ui/fuzzy-text"; 
+import FuzzyText from "@/components/Ui/fuzzy-text"; 
 
 
 export default function NotFound() {

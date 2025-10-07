@@ -1,21 +1,21 @@
 import React, { useState, useRef, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import SplashCursor from '../../SplashCursor/SplashCursor';
+import SplashCursor from '@/components/SplashCursor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
-import BlogSection from '../BlogSection/BlogSection';  
-import ThemeButton from '../../ThemeButton/ThemeButton';
+import BlogSection from '@/components/BlogSection/BlogSection';  
+import ThemeButton from '@/components/ThemeButton/ThemeButton';
 import Loader from '/src/components/Layout/loader/loader';
 
-import team1Img from '../../../assets/images/team1.jpg';
-import team2Img from '../../../assets/images/team2.jpg';
-import team3Img from '../../../assets/images/team3.jpg';
-import team4Img from '../../../assets/images/team4.jpg';
+import team1Img from '/images/team1.jpg';
+import team2Img from '/images/team2.jpg';
+import team3Img from '/images/team3.jpg';
+import team4Img from '/images/team4.jpg';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -88,7 +88,7 @@ export default function Home() {
 
   return (
     <>
-      <SplashCursor />
+      {/* <SplashCursor /> */}
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen bg-[var(--agenko-background-dark)] pt-[240px] md:pt-[260px] lg:pt-[280px] pb-[200px] transition-colors duration-300 overflow-hidden">
@@ -250,7 +250,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block border border-[var(--agenko-primary-green)] text-[var(--agenko-heading-light)] px-4 py-2 rounded-full mb-3" data-aos="fade-up">Complete Work</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--agenko-heading-light)] leading-tight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--agenko-heading-light)] leading-tight" data-aos="fade-up"  data-aos-delay="50">
               Creative Projects We've
               <br />
               Delivered To Client
@@ -384,12 +384,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/**************************** Process Section *************/}
       <section className="relative py-20 bg-[var(--agenko-background-dark)] transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block border border-[var(--agenko-primary-green)] text-[var(--agenko-heading-light)] px-4 py-2 rounded-full mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Working Process</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--agenko-heading-light)] leading-tight" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <span className="inline-block border border-[var(--agenko-primary-green)] text-[var(--agenko-heading-light)] px-4 py-2 rounded-full mb-3" data-aos="fade-up" data-aos-delay="100">Working Process</span>
+            <h2 className="text-4xl lg:text-5xl font-bold text-[var(--agenko-heading-light)] leading-tight" data-aos="fade-up"  data-aos-delay="200">
               The Process Behind the
               <br />
               Magic Step by Step
@@ -400,7 +400,7 @@ export default function Home() {
             <div className="flex flex-wrap">
               <div className="w-full md:w-6/12 lg:w-3/12 px-4 mb-8 text-center">
                 <div className="inline-block bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] rounded-full px-4 py-2 mb-4 font-medium">Step 01</div>
-                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up"  data-aos-delay="0" data-aos-offset="20">
                   <div className="text-3xl text-[var(--agenko-primary-green)] mb-3">
                     <i className="fas fa-search"></i>
                   </div>
@@ -411,7 +411,7 @@ export default function Home() {
 
               <div className="w-full md:w-6/12 lg:w-3/12 px-4 mb-8 text-center">
                 <div className="inline-block bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] rounded-full px-4 py-2 mb-4 font-medium">Step 02</div>
-                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up"  data-aos-delay="0" data-aos-offset="30">
                   <div className="text-3xl text-[var(--agenko-primary-green)] mb-3">
                     <i className="fas fa-pencil-ruler"></i>
                   </div>
@@ -422,7 +422,7 @@ export default function Home() {
 
               <div className="w-full md:w-6/12 lg:w-3/12 px-4 mb-8 text-center">
                 <div className="inline-block bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] rounded-full px-4 py-2 mb-4 font-medium">Step 03</div>
-                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up"  data-aos-delay="0" data-aos-offset="40" >
                   <div className="text-3xl text-[var(--agenko-primary-green)] mb-3">
                     <i className="fas fa-cogs"></i>
                   </div>
@@ -433,7 +433,7 @@ export default function Home() {
 
               <div className="w-full md:w-6/12 lg:w-3/12 px-4 mb-8 text-center">
                 <div className="inline-block bg-[var(--agenko-primary-green)] text-[var(--agenko-background-dark)] rounded-full px-4 py-2 mb-4 font-medium">Step 04</div>
-                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                <div className="p-6 bg-[var(--agenko-surface-dark)] border border-[var(--agenko-border-dark)] rounded-xl" data-aos="fade-up"   data-aos-delay="0" data-aos-offset="50">
                   <div className="text-3xl text-[var(--agenko-primary-green)] mb-3">
                     <i className="fas fa-check-circle"></i>
                   </div>
@@ -447,7 +447,7 @@ export default function Home() {
       </section>
 
       {/* Company Section */}
-      <section className="company-section relative py-32 bg-[var(--agenko-background-dark)] transition-colors duration-300">
+      <section className="company-section relative py-32 dark:bg-[var(--agenko-background-dark)] bg-[var(--agenko-bg-section)]  transition-colors duration-300">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full lg:w-6/12 px-4 mb-12 lg:mb-0">
@@ -474,7 +474,8 @@ export default function Home() {
                   <img
                     src="/images/client1.png"
                     alt="Client"
-                    className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    className="mx-auto opacity-70 hover:opacity-100 transition-opacity text "
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
                 <div className="client-item border border-[var(--agenko-border-dark)] p-8 text-center hover:border-[var(--agenko-primary-green)] transition-colors">
@@ -482,6 +483,7 @@ export default function Home() {
                     src="/images/client2.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    style={{ dark: 'invert(1)', filter: 'invert(1)' }}
                   />
                 </div>
                 <div className="client-item border border-[var(--agenko-border-dark)] p-8 text-center hover:border-[var(--agenko-primary-green)] transition-colors">
@@ -489,6 +491,7 @@ export default function Home() {
                     src="/images/client3.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
                 <div className="client-item border border-[var(--agenko-border-dark)] p-8 text-center hover:border-[var(--agenko-primary-green)] transition-colors">
@@ -496,6 +499,7 @@ export default function Home() {
                     src="/images/client4.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
                 <div className="client-item border border-[var(--agenko-border-dark)] p-8 text-center hover:border-[var(--agenko-primary-green)] transition-colors">
@@ -503,12 +507,14 @@ export default function Home() {
                     src="/images/client5.png"
                     alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
                 <div className="client-item border border-[var(--agenko-border-dark)] p-8 text-center hover:border-[var(--agenko-primary-green)] transition-colors">
                   <img
                     src="/images/client6.png"alt="Client"
                     className="mx-auto opacity-70 hover:opacity-100 transition-opacity"
+                    style={{ filter: 'invert(1)' }}
                   />
                 </div>
               </div>
@@ -560,8 +566,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Awards Section */}
-      <section className="py-20 bg-[var(--agenko-background-dark)]">
+      {/*************** Awards Section ***************/}
+      <section className="py-20 dark:bg-[var(--agenko-background-dark)] bg-[var(--agenko-bg-section)] transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-12">
             <div className="lg:w-1/2 mb-8 lg:mb-0">
@@ -581,7 +587,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             <div className="lg:col-span-4">
-              <div className="overflow-hidden rounded-lg mb-8">
+              <div className="overflow-hidden rounded-lg mb-8 " data-aos="zoom-in-left">
                 <img 
                   src="/images/award1.jpg" 
                   alt="Award Image"
@@ -592,7 +598,7 @@ export default function Home() {
 
             <div className="lg:col-span-8">
               <div className="space-y-5">
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50 p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" >
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       Microsoft Platform
@@ -610,7 +616,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50  p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       LinkedIn Platform
@@ -628,7 +634,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50  p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200" >
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       Adobe Platform
@@ -646,7 +652,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50  p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       Fiverr Platform
@@ -664,7 +670,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50  p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       Upwork Platform
@@ -682,7 +688,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap justify-between items-center bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0">
+                <div className="flex flex-wrap justify-between items-center dark:bg-[var(--agenko-surface-dark)] hover:bg-[var(--agenko-surface-darker)] bg-amber-50  p-6 lg:px-10 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="500">
                   <div className="w-full md:w-[30%] mb-4 md:mb-0 text-center md:text-left">
                     <h5 className="text-lg text-[var(--agenko-text-muted)] group-hover:text-[var(--agenko-heading-light)] transition-colors duration-300">
                       Upwork Platform

@@ -1,0 +1,73 @@
+/* Slider Dots Customization */
+.slick-dots {
+  bottom: -50px;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--agentko-text-muted);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+.slick-dots li.slick-active button {
+  background: var(--agentko-primary-green);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Smooth transitions */
+.agenko-rotate-image {
+  transition: transform 0.5s ease;
+}
+
+.testimonial-content {
+  transition: all 0.3s ease;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Fade animation for slider */
+.slick-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slick-active {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .testimonial-content {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-content {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  
+  .agenko-image {
+    transform: rotate(2deg);
+  }
+}

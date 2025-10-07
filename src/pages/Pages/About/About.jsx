@@ -1,8 +1,9 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import FlowingMenu from '@/components/FlowingMenu/FlowingMenu';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaPinterestP } from 'react-icons/fa';
-import CounterSection from '../../CounterSection/CounterSection';
+import CounterSection from '@/components//CounterSection/CounterSection';
 import PageBanner from '@/components/PageBanner/PageBanner';
 
 
@@ -42,7 +43,12 @@ const teamMembers = [
     image: '/images/pages/team/team5.jpg',
   },
 ];
-
+const demoItems = [
+  { link: '#', text: 'Development', image: '/public/images/digital-agency/team/team1.jpg',  },
+  { link: '#', text: 'UI/UX Design', image: '/public/images/digital-agency/team/team2.jpg' },
+  { link: '#', text: 'Graphics', image: '/public/images/digital-agency/team/team3.jpg' },
+  { link: '#', text: 'Marketing', image: '/public/images/digital-agency/team/team4.jpg' , }
+];
 // مكون عضو الفريق
 const TeamMember = ({ member }) => {
   return (
@@ -251,6 +257,12 @@ export default function About() {
 
 
       <CounterSection />
+
+
+
+          <div style={{ height: 'auto', position: 'relative' }} className="mb-0">
+  <FlowingMenu items={demoItems} />
+</div>
       {/* Team Section */}
       <section className="bg-[#0E0F11] pt-32 pb-20">
         <div className="container mx-auto px-4 max-w-7xl">

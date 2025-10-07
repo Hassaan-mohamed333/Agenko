@@ -11,7 +11,8 @@ export default function PageBanner({
   showCircle = true,
   iconImage = "/images/pages/shape//star1.png",
   circleImage = "/images/pages/shape/circle-shape1.png",
-  className = ""
+  className = "",
+  spinDuration = "15s"
 }) {
   return (
     
@@ -49,7 +50,7 @@ export default function PageBanner({
                         <img 
                           alt="Shape Icon" 
                           src={iconImage} // استخدام المتغير iconImage
-                          className="animate-spin bg-black rounded-full p-2 w-16 h-16 lg:w-20 lg:h-20" 
+                          className="animate-[spin_3s_linear_infinite] bg-black rounded-full p-2 w-16 h-16 lg:w-20 lg:h-20" 
                         />
                       </div>
                       {/* Description */}
@@ -98,7 +99,7 @@ export default function PageBanner({
               <img 
                 alt="circle shape" 
                 src={circleImage} // استخدام المتغير circleImage
-                className="animate-spin w-32 h-32 lg:w-40 lg:h-40 bg-black rounded-full p-2" 
+                className="animate-[spin_3s_linear_infinite] w-32 h-32 lg:w-40 lg:h-40 bg-black rounded-full p-2" 
               />
             </div>
           </div>
