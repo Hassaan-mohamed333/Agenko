@@ -88,7 +88,7 @@ export default function Home() {
 
   return (
     <>
-      {/* <SplashCursor /> */}
+      <SplashCursor />
       
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen bg-[var(--agenko-background-dark)] pt-[240px] md:pt-[260px] lg:pt-[280px] pb-[200px] transition-colors duration-300 overflow-hidden">
