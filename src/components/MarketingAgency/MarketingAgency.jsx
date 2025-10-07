@@ -385,7 +385,7 @@ export default function MarketingAgency() {
 
             {/* CTA Section */}
           <section className="agk-cta bg-[var(--agenko-background-dark)] relative overflow-hidden">
-  {/* خلفيات ديكورية */}
+  {/* Background Circles */}
   <div className="absolute inset-0 opacity-10">
     <div className="absolute top-1/4 left-10 w-72 h-72 bg-[var(--agenko-primary-green)] rounded-full blur-3xl animate-pulse"></div>
     <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-[var(--agenko-primary-green)] rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
@@ -412,7 +412,7 @@ export default function MarketingAgency() {
           </div>
         </div>
 
-        {/* الزر والإجراء */}
+        {/* زرار */}
         <div className="lg:w-1/2 lg:flex lg:justify-end" data-aos="fade-left" data-aos-delay="200">
           <div className="text-center lg:text-right">
             <div className="agenko-button mb-6 lg:mb-8">
